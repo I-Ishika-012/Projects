@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <title>Home - File Uploader</title>
+  </head>
+  <body>
+    <%-include('./partials/nav.ejs')%>
+    <header>
+      <h1>File upload using Multer + Express + Cloudinary</h1>
+      <p>
+        <b>Multer</b> is a node.js middleware for handling multipart/form-data, which is an alternative to HTML form submits. It is written on top of busboy for maximum efficiency. Multer adds a body object and a file or files object to the request object. The body object contains the values of the text fields of the form, the file or files object contains the files uploaded via the form. The object also contains a files array containing information about the uploaded files.
+        <br />
+        <br>
+        <b>Cloudinary</b> is a cloud service that offers a solution to a web application's entire image management pipeline. It enables users to upload, store, manage, manipulate and deliver images and video for websites and apps. Images and videos are managed in the cloud as opposed to being hosted on the user's servers.
+        <br/>
+        <br>
+        <b>Express</b> is a web application framework for Node.js. It provides a robust set of features for building web and mobile applications.
+      </p>
+      <a href="/upload">
+        <button>Upload</button>
+      </a>
+    </header>
+  </body>
+</html>
+`
