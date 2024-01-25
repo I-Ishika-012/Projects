@@ -7,7 +7,7 @@
     <h1 class="mb-6 text-3xl">Sign Up</h1>
 
     <form method="post" action=".">
-        {% csrf_token %}
+        {% csrf_token %} #prevents croos site request forgery
 
         <div class="mb-3">
             <label class="inline-block mb-2">Username</label><br>
