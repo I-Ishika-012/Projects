@@ -1,6 +1,6 @@
-### QuicKart - Online MarketPlace App🛒
+## QuicKart - Online MarketPlace App🛒
 
-## Project is currently being developed 🛠️💻
+### Project is currently being developed 🛠️💻
 
 Simple online marketplace for both buyers and sellers including secure authentication, dedicated communication channel for users and relevant CRUD operations.
 
