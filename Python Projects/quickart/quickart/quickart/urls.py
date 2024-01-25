@@ -17,7 +17,7 @@ Including another URLconf
 from django.conf import settings # new  
 from django.conf.urls.static import static # new
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from core.views import index, login, signup, contact
 
 urlpatterns = [
@@ -26,6 +26,6 @@ urlpatterns = [
     path('login/', login, name='login'),
     path('signup/', signup, name='signup'),
     path('contact/', contact, name='contact'),
-    # path('item/', include('item.urls')),
+    path('items/', include('item.urls')),
     # path('conversation/', include('conversation.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
