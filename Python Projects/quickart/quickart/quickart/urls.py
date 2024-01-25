@@ -18,14 +18,14 @@ from django.conf import settings # new
 from django.conf.urls.static import static # new
 from django.contrib import admin
 from django.urls import path, include
-from core.views import index, login, signup, contact
+# from core.views import index, login, signup, contact
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index, name='index'),
-    path('login/', login, name='login'),
-    path('signup/', signup, name='signup'),
-    path('contact/', contact, name='contact'),
+    path('', include('item.urls')),
+    # path('login/', login, name='login'),
+    # path('signup/', signup, name='signup'),
+    # path('contact/', contact, name='contact'),
     path('items/', include('item.urls')),
     # path('conversation/', include('conversation.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
