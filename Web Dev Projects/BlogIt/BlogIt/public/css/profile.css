@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    --bluest-blue: #003049;
+    --is-avl: #45FFCA;
+    
+  }
+  
+  body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f2f2f2;
+  }
+  
+  .profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: var(); */
+  }
+  .profile-container header {
+    padding: 20px;
+    border-bottom: 1px solid #e6e6e6;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+  
+  .profile-img img  {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    position: absolute;
+    margin-top: -70px;
+    margin-left: -80px;
+    align-self: center;
+  }
+  .profile-img p img {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 45px;
+    position: absolute;
+    border: none;
+    border-radius: 0%;
+    cursor: pointer;
+    padding: 5px;
+
+  }
+  /* .profile-img .fas {
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 60px;
+    font-size: 50px;
+    color: #fff;
+    background-color: var(--is-avl);
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+  } */
+  
+  .profile-container .icons-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 20vh;
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+  .profile-container .icons-container p img {
+    width: 30px;
+    height: 30px;
+    /* border-radius: 50%; */
+    border: none;
+    position: absolute;
+     margin-top: -70px;
+   
+    /* margin-left: -80px; */ 
+    align-self: center;
+      
+  }
+  .profile-container .icons-container p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 30px;
+
+  }
+  
+  .profile-container .icons-container .fas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    color: #fb8500;
+    font-size: 25px;
+    margin-right: 10px;
+  }
+  
+  .personal-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    background-color: none;
+    width: 40%;
+    padding: 20px;
+    margin-top: 100px;
+    border-radius: 20px;
+    /* color: var(--dark-cyan); */
+  }
+  .personal-container p {
+    color: var(--dark-cyan);
+  }
+  .profile-container .details {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    margin-top: 10px;
+    
+
+  }
+  
+  .details-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .details .fas {
+    margin-right: 10px;
+    color: #1da1f2;
+  }
+  
+  .details img {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    
+  }
+  
+  .latest-post-title img{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+  }

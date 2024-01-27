@@ -1,0 +1,3 @@
+env variables are used to store sensitive data such as API credentials, keys, passwords, etc..
+ensures security
+can be for dev and production purposes within the same file or the separate files

@@ -1,0 +1,38 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/42a182743f.js" crossorigin="anonymous"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/uploadPhoto.css">
+    <title>Upload Profile Photo</title>
+  </head>
+  <body>
+    <!--navbar-->
+    <%-include('../partials/navbar.ejs') %>
+    <div class="form-container">
+      <!-- icon -->
+      <h1>Upload Profile Photo</h1>
+      <p>
+        <!-- upload icon -->
+        <!-- <img src="/icons/file-upload.png" alt="upload"> -->
+      </p>
+      <small class="error">
+        <!-- <i class="fas fa-exclamation-circle"></i> -->
+        <img src="/icons/error.png" alt="error">
+        Invalid Credentials
+      </small>
+      <form action="/api/v1/users/upload-profile-photo?_method=PUT" method="POST" enctype="multipart/form-data">
+        <label for="email">Select Imgae</label>
+        <input type="file" name="profile">
+        <button type="submit">
+          <!-- <i class="fas fa-upload"></i> -->
+          <img src="/icons/file-upload.png" alt="upload">
+        </button>
+      </form>
+    </div>
+  <!--footer-->
+  <%-include('../partials/footer') %>
+
+</body></html>
