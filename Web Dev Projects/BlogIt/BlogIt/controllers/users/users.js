@@ -133,10 +133,11 @@ const profilePhotoUploadCtrl =  async (req, res, next) => {
       {
         new: true ,
       });
-      res.json({
-        status: "success",
-        data: "User profile image uploaded successfully",
-      });
+      // res.json({
+      //   status: "success",
+      //   data: "User profile image uploaded successfully",
+      // });
+      res.redirect("/api/v1/users/profile-page");
     } catch (error) {
       // return next(appErr(error.message, 400));
       return res.render("users/profile", { error: error.message });
