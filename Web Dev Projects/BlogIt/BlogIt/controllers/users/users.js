@@ -124,7 +124,7 @@ const profilePhotoUploadCtrl =  async (req, res, next) => {
       //if usr is not found
       if (!userFound) {
         // return next(appErr("User not found", 404));
-        return res.render("users/profile", { error: "User not found" });
+        return res.render("users/uploadProfilePhoto", { error: "User not found" });
       }
       //update user profile image
       await User.findByIdAndUpdate(userId, {
@@ -140,7 +140,7 @@ const profilePhotoUploadCtrl =  async (req, res, next) => {
       res.redirect("/api/v1/users/profile-page");
     } catch (error) {
       // return next(appErr(error.message, 400));
-      return res.render("users/profile", { error: error.message });
+      return res.render("users/uploadProfilePhoto", { error: error.message });
     }
   };
 
