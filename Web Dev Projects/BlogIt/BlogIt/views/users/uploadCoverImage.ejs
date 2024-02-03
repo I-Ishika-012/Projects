@@ -18,11 +18,13 @@
         <!-- upload icon -->
         <!-- <img src="/icons/file-upload.png" alt="upload"> -->
       </p>
-      <small class="error">
-        <!-- <i class="fas fa-exclamation-circle"></i> -->
-        <img src="/icons/error.png" alt="error">
-        Invalid Credentials
-      </small>
+     <%if(error){%>
+        <small class="error">
+          <!-- <i class="fas fa-exclamation-circle"></i> -->
+          <img src="/icons/error.png" alt="error">
+          <%=error%>
+        </small>
+        <%}%>
       <form action="/api/v1/users/cover-photo-upload?_method=PUT" method="POST" enctype="multipart/form-data">
         <label for="email">Select Imgae</label>
         <input type="file" name="image" id="image">
