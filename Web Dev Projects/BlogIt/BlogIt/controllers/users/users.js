@@ -87,6 +87,7 @@ const userDetailsCtrl = async (req, res) => {
 
 const profileCtrl = async (req, res) => {
     try {
+      
       //!get user profile - logged in user
       const userID = req.session.userAuth;
       //! find the user
@@ -146,12 +147,16 @@ const profilePhotoUploadCtrl =  async (req, res, next) => {
 
   const coverPhotoUploadCtrl = async (req, res, next) => {
     try {
+      //check if file exists
+      if (!req.file) {
+        return res.render("users/uploadCoverImage", { error: "Please upload a file" });
+      }
       //find user
       const userId = req.session.userAuth;
       const userFound = await User.findById(userId);
       //if usr is not found
       if (!userFound) {
-        return next(appErr("User not found", 404));
+        return res.render("users/uploadCoverImage", { error: "User not found" });
       }
       //update user cover image
       await User.findByIdAndUpdate(userId, {
@@ -160,12 +165,9 @@ const profilePhotoUploadCtrl =  async (req, res, next) => {
       {
         new: true,
       });
-      res.json({
-        status: "success",
-        user: "User cover image uploaded successfully",
-      });
+     res.redirect("/api/v1/users/profile-page");
     } catch (error) {
-      return next(appErr(error.message, 400));
+      return res.render("users/uploadCoverImage", { error: error.message });
     }
   };
 
