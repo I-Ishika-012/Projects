@@ -113,6 +113,11 @@ const profileCtrl = async (req, res) => {
 
 const profilePhotoUploadCtrl =  async (req, res, next) => {
     try {
+      //check if file exists
+      if(!req.file) {
+        // return next(appErr("Please upload a file", 400));
+        res.render("users/profile", { error: "Please upload a file" });
+      }
       //find user
       const userId = req.session.userAuth;
       const userFound = await User.findById(userId);
