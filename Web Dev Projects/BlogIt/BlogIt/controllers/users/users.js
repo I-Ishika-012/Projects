@@ -138,7 +138,8 @@ const profilePhotoUploadCtrl =  async (req, res, next) => {
         data: "User profile image uploaded successfully",
       });
     } catch (error) {
-      return next(appErr(error.message, 400));
+      // return next(appErr(error.message, 400));
+      return res.render("users/profile", { error: error.message });
     }
   };
 
