@@ -41,17 +41,17 @@ userRoutes.get("/login", (req, res) => {
 
 //?PROFILE-PHOTO
 userRoutes.get("/upload-profile-photo", (req, res) => {
-  res.render("users/uploadProfilePhoto");
+  res.render("users/uploadProfilePhoto", { error: ""});
 })
 
 //?PROFILE-COVER
 userRoutes.get("/upload-cover-photo", (req, res) => {
-  res.render("users/uploadCoverImage");
+  res.render("users/uploadCoverImage", { error: ""});
 })
 
 //?UPDATE-USER
 userRoutes.get("/update-user", (req, res) => {
-  res.render("users/updateUser");
+  res.render("users/updateUser", { error: ""});
 })
 //-----------------
 //!API ROUTES
