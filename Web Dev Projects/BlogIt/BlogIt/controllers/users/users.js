@@ -208,7 +208,7 @@ const updateUserCtrl =  async (req, res, next) => {
       }
     }
     //!update user
-    const user = await User.findByIdAndUpdate(req.params.id, {
+    const user = await User.findByIdAndUpdate(req.session.userAuth, {
       fullname,
       email,
     }, { 
