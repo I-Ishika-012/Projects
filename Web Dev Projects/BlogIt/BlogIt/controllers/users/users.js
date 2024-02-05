@@ -76,9 +76,12 @@ const userDetailsCtrl = async (req, res) => {
       if (!user) {
         return next(appErr("User not found", 404));
       }
-      res.json({
-        status: "success",
-        data: user,
+      // res.json({
+      //   status: "success",
+      //   data: user,
+      // });
+      res.render("users/updateUser", {
+        user,
       });
     } catch (error) {
       res.json(error);
