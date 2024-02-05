@@ -204,7 +204,7 @@ const updateUserCtrl =  async (req, res, next) => {
     if (email) {
       const emailTaken = await User.findOne({ email });
       if (emailTaken) {
-        return next(appErr("Email already in use", 400));
+        return res.render("users/updateUser", { error: "Email already in use" });
       }
     }
     //!update user
@@ -223,7 +223,8 @@ const updateUserCtrl =  async (req, res, next) => {
       // })
     res.redirect("/api/v1/users/profile-page");
     } catch (error) {
-      return next(appErr(error.message, 400));
+      return res.render("users/updateUser", { error: error.message });
+    }
     }
 }
 
