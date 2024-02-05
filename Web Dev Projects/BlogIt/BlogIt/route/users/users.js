@@ -50,9 +50,9 @@ userRoutes.get("/upload-cover-photo", (req, res) => {
 })
 
 //?UPDATE-USER
-userRoutes.get("/update-user", (req, res) => {
-  res.render("users/updateUser", { error: ""});
-})
+// userRoutes.get("/update-user", (req, res) => {
+//   res.render("users/updateUser", { error: ""});
+// })
 //-----------------
 //!API ROUTES
 //-----------------
