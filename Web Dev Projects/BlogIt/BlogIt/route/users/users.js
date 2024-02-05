@@ -82,7 +82,7 @@ userRoutes.get("/logout", logoutCtrl);
 userRoutes.get("/:id", userDetailsCtrl );
 
 //PUT/update/:id
-userRoutes.put("/update/:id", updateUserCtrl );
+userRoutes.put("/update", updateUserCtrl );
   
 
   
