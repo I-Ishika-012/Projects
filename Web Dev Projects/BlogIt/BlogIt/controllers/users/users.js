@@ -215,12 +215,13 @@ const updateUserCtrl =  async (req, res, next) => {
       new: true ,
     });
     //!save the user in the session
-    req.session.userAuth = user._id;
+    // req.session.userAuth = user._id;
     //!send response
-      res.json({
-        status: "success",
-        data: user,
-      })
+      // res.json({
+      //   status: "success",
+      //   data: user,
+      // })
+    res.redirect("/api/v1/users/profile-page");
     } catch (error) {
       return next(appErr(error.message, 400));
     }
