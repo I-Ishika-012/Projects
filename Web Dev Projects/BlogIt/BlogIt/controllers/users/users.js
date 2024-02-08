@@ -181,7 +181,7 @@ const profilePhotoUploadCtrl =  async (req, res, next) => {
         const salt = await bcrypt.genSalt(10);
         const hashedPassword = await bcrypt.hash(password, salt);
         //update user
-        await User.findByIdAndUpdate(req.params.id, {
+        await User.findByIdAndUpdate(req.session.userAuth, {
         password: hashedPassword,
         },
         {
