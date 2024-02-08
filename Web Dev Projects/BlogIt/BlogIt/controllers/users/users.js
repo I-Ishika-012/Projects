@@ -204,7 +204,7 @@ const updateUserCtrl =  async (req, res, next) => {
     if (email) {
       const emailTaken = await User.findOne({ email });
       if (emailTaken) {
-        return res.render("users/updateUser", { error: "Email already in use" });
+        return res.render("users/updateUser", { error: "Email already in use", user: "", });
       }
     }
     //!update user
