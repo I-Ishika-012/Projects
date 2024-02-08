@@ -73,7 +73,7 @@ userRoutes.post("/login", loginCtrl );
   userRoutes.put("/cover-photo-upload", protected, upload.single("cover"), coverPhotoUploadCtrl);
   
   //PUT/update-password/:id
-  userRoutes.put("/update-password/:id", updatePasswordCtrl);
+  userRoutes.put("/update-password", updatePasswordCtrl);
 
 //GET/logout
 userRoutes.get("/logout", logoutCtrl);
