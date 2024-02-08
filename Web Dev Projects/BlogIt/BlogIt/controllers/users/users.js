@@ -223,7 +223,7 @@ const updateUserCtrl =  async (req, res, next) => {
       // })
     res.redirect("/api/v1/users/profile-page");
     } catch (error) {
-      return res.render("users/updateUser", { error: error.message });
+      return res.render("users/updateUser", { error: error.message, user: "", });
     }
     }
 }
