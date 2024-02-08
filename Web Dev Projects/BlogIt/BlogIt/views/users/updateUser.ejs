@@ -19,10 +19,13 @@
         <img class="user-update" src="/icons/avatar.png" alt="user-update-icon">
       </h1>
 
-      <small class="error">
-        <!-- <i class="fas fa-exclamation-circle"></i> -->
-        <img class="error-icon" src="/icons/error.png" alt="error"> Invalid Credentials
-      </small>
+      <%if (error) {%>
+        <small class="error">
+          <!-- <i class="fas fa-exclamation-circle"></i> -->
+          <img src="/icons/error.png" alt="error">
+          <%=error %>
+        </small>
+        <%}%>
       <form action="/api/v1/users/update?_method=put" method="POST">
         <!-- full name -->
         <label for="name">Full Name</label>
