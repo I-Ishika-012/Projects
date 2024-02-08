@@ -200,8 +200,12 @@ const profilePhotoUploadCtrl =  async (req, res, next) => {
 const updateUserCtrl =  async (req, res, next) => {
   const { fullname, email} = req.body;  
   try {
+    if (!fullname || !email) {
+      return res.render("users/updateUser", { error: "All fields are required", user: "", });
+    }
     //!check if the email is already in use
     if (email) {
+      //!check if fields are empty
       const emailTaken = await User.findOne({ email });
       if (emailTaken) {
         return res.render("users/updateUser", { error: "Email already in use", user: "", });
