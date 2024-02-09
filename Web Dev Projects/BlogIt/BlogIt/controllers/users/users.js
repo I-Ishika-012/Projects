@@ -73,15 +73,12 @@ const userDetailsCtrl = async (req, res) => {
       const userID = req.params.id;
       //! find the user
       const user = await User.findById(userID);
-      if (!user) {
-        return next(appErr("User not found", 404));
-      }
-      // res.json({
-      //   status: "success",
-      //   data: user,
-      // });
+      // if (!user) {
+      //   return next(appErr("User not found", 404));
+      // }
       res.render("users/updateUser", {
         user,
+        error: "",
       });
     } catch (error) {
       res.json(error);
