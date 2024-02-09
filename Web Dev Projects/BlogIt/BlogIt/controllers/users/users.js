@@ -187,13 +187,10 @@ const profilePhotoUploadCtrl =  async (req, res, next) => {
         {
         new: true ,
         });
-      res.json({
-        status: "success",
-        user: "User password updated",
-      })
+      res.redirect("/api/v1/users/profile-page");
       }
     } catch (error) {
-      return next(appErr(error.message, 400));
+      return res.render("users/updatePassword", { error: error.message });
     }
   }
 
