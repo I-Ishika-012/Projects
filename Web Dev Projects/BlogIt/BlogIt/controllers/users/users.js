@@ -81,7 +81,9 @@ const userDetailsCtrl = async (req, res) => {
         error: "",
       });
     } catch (error) {
-      res.json(error);
+      res.render("users/updateUser", {
+        error: error.message,
+      })
     }
   };
 
