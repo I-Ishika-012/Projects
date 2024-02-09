@@ -49,10 +49,10 @@ userRoutes.get("/upload-cover-photo", (req, res) => {
   res.render("users/uploadCoverImage", { error: ""});
 })
 
-//?UPDATE-USER
-// userRoutes.get("/update-user", (req, res) => {
-//   res.render("users/updateUser", { error: ""});
-// })
+//?UPDATE-USER-PASSWORD
+userRoutes.get("/update-user-password", (req, res) => {
+  res.render("users/updatePassword", { error: ""});
+});
 //-----------------
 //!API ROUTES
 //-----------------
