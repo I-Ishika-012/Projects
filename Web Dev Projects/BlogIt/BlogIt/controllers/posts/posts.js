@@ -1,3 +1,5 @@
+const User = require("../../models/User");
+const Post = require("../../models/Post");
 const createPostCtrl = async (req, res) => {
     try {
       res.json({
