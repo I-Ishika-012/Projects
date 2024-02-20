@@ -1,7 +1,10 @@
 const User = require("../../models/User");
 const Post = require("../../models/Post");
+
 const createPostCtrl = async (req, res) => {
     try {
+        //!find the user
+      const userId = req.session.userAuth;
       res.json({
         status: "success",
         user: "Post created",
