@@ -5,6 +5,14 @@ const createPostCtrl = async (req, res) => {
     try {
         //!find the user
       const userId = req.session.userAuth;
+        const userFound = await User.findById(userId);
+        const postCreated = await Post.create({
+        title,
+        description,
+        category,
+        image,
+        user,
+      });
       res.json({
         status: "success",
         user: "Post created",
