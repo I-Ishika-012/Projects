@@ -3,7 +3,7 @@ const {createPostCtrl, updatePostCtrl, deletePostCtrl, fetchPostCtrl, fetchPosts
 const postRoutes = express.Router();
 const protected = require("../../middlewares/protected");
 const multer = require("multer");
-
+const storage = require("../../config/cloudinary");
 
 //POST/api/v1/posts
 postRoutes.post("/", protected, createPostCtrl); 
