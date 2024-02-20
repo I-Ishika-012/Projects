@@ -2,6 +2,7 @@ const express = require("express");
 const {createPostCtrl, updatePostCtrl, deletePostCtrl, fetchPostCtrl, fetchPostsCtrl } = require("../../controllers/posts/posts");
 const postRoutes = express.Router();
 const protected = require("../../middlewares/protected");
+const multer = require("multer");
 
 
 //POST/api/v1/posts
