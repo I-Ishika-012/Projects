@@ -11,7 +11,7 @@ const createPostCtrl = async (req, res) => {
         description,
         category,
         image,
-        user,
+        user: userFound._id,
       });
       res.json({
         status: "success",
