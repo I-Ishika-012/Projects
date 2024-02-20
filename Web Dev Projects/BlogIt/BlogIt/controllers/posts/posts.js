@@ -13,6 +13,10 @@ const createPostCtrl = async (req, res) => {
         image,
         user: userFound._id,
       });
+        //!push the post created to the user posts array
+      userFound.posts.push(postCreated._id);
+      //!resave
+      await userFound.save();
       res.json({
         status: "success",
         user: "Post created",
