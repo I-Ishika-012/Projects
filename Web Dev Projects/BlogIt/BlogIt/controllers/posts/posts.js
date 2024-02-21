@@ -79,13 +79,28 @@ const deletePostCtrl =  async (req, res, next) => {
   }
 
 const updatePostCtrl =  async (req, res) => {
+   const { title, description, category, image} = req.body;
     try {
+      //!find post
+      const post = await Post.findById(req.params.id);
+      //!check if the post belongs to user
+      if(post.user.toString() !== req.session.userAuth) {
+        return next(appErr("You are not authorized to update this post", 403));
+      }
+      //!update
+      const updatedPost = await Post.findByIdAndUpdate(req.params.id, {
+        title,
+        description,
+        category,
+        image: req.file.path,
+      }, 
+      { new: true });
       res.json({
         status: "success",
-        user: "Post updated",
+        data: post,
       });
     } catch (error) {
-      res.json(error);
+      next(appErr(error.message, 404));
     }
   }
 
