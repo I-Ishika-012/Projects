@@ -41,14 +41,19 @@ const fetchPostsCtrl =  async (req, res) => {
     }
   }
 
-const fetchPostCtrl =  async (req, res) => {
+const fetchPostCtrl =  async (req, res, next) => {
     try {
+      //!get id from params
+      const id = req.params.id;
+      //!find the post in db
+      const post = await Post.findById(id);
+      //!res.json({ status: "success", post: post });
       res.json({
         status: "success",
-        user: "Post details",
+        data: post,
       });
     } catch (error) {
-      res.json(error);
+      next(appErr("Post not found", 404));
     }
   }
 
