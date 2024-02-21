@@ -79,7 +79,11 @@ const deletePostCtrl =  async (req, res, next) => {
   }
 
 const updatePostCtrl =  async (req, res) => {
-   const { title, description, category, image} = req.body;
+  const { title, description, category, image} = req.body;
+  //!prevent empty data
+  if(!title || !description || !category || !req.file) {
+    return next(appErr("All fields are required", 400));
+  }
     try {
       //!find post
       const post = await Post.findById(req.params.id);
@@ -97,7 +101,7 @@ const updatePostCtrl =  async (req, res) => {
       { new: true });
       res.json({
         status: "success",
-        data: post,
+        data: updatedPost,
       });
     } catch (error) {
       next(appErr(error.message, 404));
