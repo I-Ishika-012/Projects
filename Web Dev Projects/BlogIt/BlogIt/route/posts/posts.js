@@ -5,8 +5,11 @@ const protected = require("../../middlewares/protected");
 const multer = require("multer");
 const storage = require("../../config/cloudinary");
 
+//?instance of multer
+const upload = multer({ storage });
+
 //POST/api/v1/posts
-postRoutes.post("/", protected, createPostCtrl); 
+postRoutes.post("/", protected, upload.single("file"), createPostCtrl); 
 
   //GET/api/v1/posts
   postRoutes.get("/", fetchPostsCtrl);
