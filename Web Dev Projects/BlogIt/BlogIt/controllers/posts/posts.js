@@ -30,14 +30,16 @@ const createPostCtrl = async (req, res, next) => {
     }
   }
 
-const fetchPostsCtrl =  async (req, res) => {
+const fetchPostsCtrl =  async (req, res, next) => {
     try {
+      //!find all posts in db
+      const posts = await Post.find();
       res.json({
         status: "success",
-        user: "Posts list",
+        data: posts,
       });
     } catch (error) {
-      res.json(error);
+      next(appErr(error.message));
     }
   }
 
