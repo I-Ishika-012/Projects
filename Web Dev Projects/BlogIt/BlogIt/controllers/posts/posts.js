@@ -1,8 +1,12 @@
 const User = require("../../models/User");
 const Post = require("../../models/Post");
+const appErr = require("../../utils/appErr");
 
-const createPostCtrl = async (req, res) => {
+const createPostCtrl = async (req, res, next) => {
     try {
+        if(!title || !description || !category || !req.file) {
+        return next(appErr("All fields are required", 400));
+      }
         //!find the user
       const userId = req.session.userAuth;
         const userFound = await User.findById(userId);
