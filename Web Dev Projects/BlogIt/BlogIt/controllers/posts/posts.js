@@ -23,10 +23,10 @@ const createPostCtrl = async (req, res, next) => {
       await userFound.save();
       res.json({
         status: "success",
-        user: "Post created",
+        data: postCreated,
       });
     } catch (error) {
-      res.json(error);
+     next(appErr(error.message));
     }
   }
 
