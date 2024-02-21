@@ -10,7 +10,7 @@ const createPostCtrl = async (req, res) => {
         title,
         description,
         category,
-        image,
+        image: req.file.path,
         user: userFound._id,
       });
         //!push the post created to the user posts array
