@@ -59,14 +59,16 @@ const fetchPostCtrl =  async (req, res, next) => {
     }
   }
 
-const deletePostCtrl =  async (req, res) => {
-    try {
+const deletePostCtrl =  async (req, res, next) => {
+     try {
+      //!delete
+      const deletedPost = await Post.findByIdAndDelete(req.params.id);
       res.json({
         status: "success",
-        user: "Post deleted",
+        data: "Post deleted",
       });
     } catch (error) {
-      res.json(error);
+      next(appErr(error.message, 404));
     }
   }
 
