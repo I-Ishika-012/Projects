@@ -10,7 +10,7 @@ commentRoutes.post("/:id", protected, commentCtrl);
   commentRoutes.get("/:id",commentPostCtrl );
   
   //DELETE/api/v1/comments/:id
-  commentRoutes.delete("/:id", commentDeleteCtrl);
+  commentRoutes.delete("/:id", protected, commentDeleteCtrl);
   
   //PUT/api/v1/comments/:id
   commentRoutes.put("/:id", commentUpdateCtrl);
