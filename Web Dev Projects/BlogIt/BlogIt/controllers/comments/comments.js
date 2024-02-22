@@ -68,6 +68,10 @@ const commentUpdateCtrl =  async (req, res, next) => {
    try {
     //!find comment
     const comment = await Comment.findById(req.params.id);
+       //!null check for comment
+    if(!comment) {
+      return next(appErr("Comment not found", 404));
+    }
     //!check if the comment belongs to user
     if(comment.user.toString() !== req.session.userAuth.toString()) {
       return next(appErr("You are not authorized to update this comment", 403));
