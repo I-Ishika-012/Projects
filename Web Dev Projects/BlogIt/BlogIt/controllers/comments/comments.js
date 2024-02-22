@@ -3,13 +3,33 @@ const User = require("../../models/User");
 const Comment = require("../../models/Comment");
 
 const commentCtrl = async (req, res) => {
+    const {message} = req.body;
     try {
+      //!find post
+      const post = await Post.findById(req.params.id);
+      //!create comment
+      const comment = await Comment.create({
+        user: req.session.userAuth,
+        message: message,
+      })
+      //!push the comment created to the post comments array
+      post.comments.push(comment._id);
+      //!find user
+      const user = await User.findById(req.session.userAuth);
+      //!push comment created to the user comments array
+      user.comments.push(comment._id);
+      //!disablble validation
+      //!save post
+      await post.save({ validateBeforeSave: false });
+      //!save user
+      await user.save({ validateBeforeSave: false });
+      //!send response
       res.json({
         status: "success",
-        user: "comment created",
+        data: comment,
       });
     } catch (error) {
-      res.json(error);
+      next(appErr(error.message));
     }
   }
 
