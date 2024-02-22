@@ -2,7 +2,7 @@ const Post = require("../../models/Post");
 const User = require("../../models/User");
 const Comment = require("../../models/Comment");
 
-const commentCtrl = async (req, res) => {
+const commentCtrl = async (req, res, next) => {
     const {message} = req.body;
     try {
       //!find post
@@ -33,14 +33,14 @@ const commentCtrl = async (req, res) => {
     }
   }
 
-const commentPostCtrl =  async (req, res) => {
+const commentPostCtrl =  async (req, res, next) => {
     try {
       res.json({
         status: "success",
         user: "Post comments",
       });
     } catch (error) {
-      res.json(error);
+      next(appErr(error.message, 404));
     }
   }
 
