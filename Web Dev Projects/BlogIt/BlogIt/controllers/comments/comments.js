@@ -44,7 +44,7 @@ const commentPostCtrl =  async (req, res) => {
     }
   }
 
-const commentDeleteCtrl =  async (req, res) => {
+const commentDeleteCtrl =  async (req, res, next) => {
      try {
     //!find comment
     const comment = await Comment.findById(req.params.id);
@@ -63,7 +63,7 @@ const commentDeleteCtrl =  async (req, res) => {
   }
   }
 
-const commentUpdateCtrl =  async (req, res) => {
+const commentUpdateCtrl =  async (req, res, next) => {
     try {
       res.json({
         status: "success",
