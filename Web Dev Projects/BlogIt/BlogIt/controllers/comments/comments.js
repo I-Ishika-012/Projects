@@ -64,14 +64,25 @@ const commentDeleteCtrl =  async (req, res, next) => {
   }
 
 const commentUpdateCtrl =  async (req, res, next) => {
-    try {
-      res.json({
-        status: "success",
-        user: "comment updated",
-      });
-    } catch (error) {
-      res.json(error);
+   try {
+    //!find comment
+    const comment = await Comment.findById(req.params.id);
+    //!check if the comment belongs to user
+    if(comment.user.toString() !== req.session.userAuth.toString()) {
+      return next(appErr("You are not authorized to update this comment", 403));
     }
+    //!update
+    const updatedComment = await Comment.findByIdAndUpdate(req.params.id, {
+      message: req.body.message,
+    }, 
+    { new: true });
+    res.json({
+      status: "success",
+      data: updatedComment,
+    });
+  } catch (error) {
+    next(appErr(error.message, 404));
+  }
   }
 
   module.exports ={
