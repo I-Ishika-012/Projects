@@ -1,6 +1,7 @@
 const Post = require("../../models/Post");
 const User = require("../../models/User");
 const Comment = require("../../models/Comment");
+const appErr = require("../../utils/appErr");
 
 const commentCtrl = async (req, res, next) => {
     const {message} = req.body;
