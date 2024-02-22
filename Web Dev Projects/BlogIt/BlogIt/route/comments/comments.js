@@ -4,7 +4,7 @@ const { commentCtrl, commentPostCtrl, commentDeleteCtrl, commentUpdateCtrl } = r
 const protected = require("../../middlewares/protected");
 
 //POST/api/v1/comments
-commentRoutes.post("/", protected, commentCtrl);
+commentRoutes.post("/:id", protected, commentCtrl);
   
   //GET/api/v1/comments/:id
   commentRoutes.get("/:id",commentPostCtrl );
