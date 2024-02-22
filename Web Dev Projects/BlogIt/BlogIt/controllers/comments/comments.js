@@ -1,5 +1,6 @@
 const Post = require("../../models/Post");
 const User = require("../../models/User");
+const Comment = require("../../models/Comment");
 
 const commentCtrl = async (req, res) => {
     try {
