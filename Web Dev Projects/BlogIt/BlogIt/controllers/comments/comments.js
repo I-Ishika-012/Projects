@@ -45,14 +45,22 @@ const commentPostCtrl =  async (req, res) => {
   }
 
 const commentDeleteCtrl =  async (req, res) => {
-    try {
-      res.json({
-        status: "success",
-        user: "comment deleted",
-      });
-    } catch (error) {
-      res.json(error);
+     try {
+    //!find comment
+    const comment = await Comment.findById(req.params.id);
+    //!check if the post belongs to user
+    if(comment.user.toString() !== req.session.userAuth) {
+      return next(appErr("You are not authorized to delete this comment", 403));
     }
+    //!delete
+    const deletedComment = await Comment.findByIdAndDelete(req.params.id);
+    res.json({
+      status: "success",
+      data: "comment deleted",
+    });
+  } catch (error) {
+    next(appErr(error.message, 404));
+  }
   }
 
 const commentUpdateCtrl =  async (req, res) => {
