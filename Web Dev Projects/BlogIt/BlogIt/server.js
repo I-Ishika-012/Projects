@@ -7,6 +7,7 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo'); //session store or persisting session
 const methodOverride = require('method-override');
 const globalErrHandler = require('./middlewares/globalHandler');
+const Post = require('./models/post/post');
 // dotenv.config();
 
 require('./config/dbConnect');
@@ -50,8 +51,14 @@ app.use((req, res, next) => {
 
 //routes
 //!frontend side routes
-app.get('/', (req, res) => {
-    res.render('index');
+//!user home page
+app.get('/', async (req, res) => {
+    try {
+      const posts = await Post.find();
+      res.render('index', {posts});
+    } catch (error) {
+      res.render('index', {error: error.message});
+    }
 });
 // app.use('/api/comments', commentRoutes);
 // // //global error handler
