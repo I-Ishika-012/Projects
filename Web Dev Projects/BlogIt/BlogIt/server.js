@@ -7,7 +7,7 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo'); //session store or persisting session
 const methodOverride = require('method-override');
 const globalErrHandler = require('./middlewares/globalHandler');
-const Post = require('./models/post/post');
+const Post = require('./models/post/Post');
 // dotenv.config();
 
 require('./config/dbConnect');
