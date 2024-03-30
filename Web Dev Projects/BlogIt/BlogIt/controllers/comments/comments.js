@@ -1,6 +1,6 @@
-const Post = require("../../models/Post");
-const User = require("../../models/User");
-const Comment = require("../../models/Comment");
+const Post = require("../../models/post/Post");
+const User = require("../../models/user/User");
+const Comment = require("../../models/comment/Comment");
 const appErr = require("../../utils/appErr");
 
 const commentCtrl = async (req, res, next) => {
