@@ -21,12 +21,10 @@ const createPostCtrl = async (req, res, next) => {
       userFound.posts.push(postCreated._id);
       //!resave
       await userFound.save();
-      res.json({
-        status: "success",
-        data: postCreated,
-      });
+      //!redirect
+    res.redirect("/");
     } catch (error) {
-     next(appErr(error.message));
+     return res.render("posts/addPost", { error: error.message });
     }
   }
 
