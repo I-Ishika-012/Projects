@@ -19,10 +19,13 @@
         <!-- add icon -->
         <i class="fas fa-plus"></i>
       </h1>
-      <small class="error">
-        <i class="fas fa-exclamation-circle"></i>
-        Invalid Credentials
-      </small>
+      <%if(error){%>
+        <small class="error">
+          <!-- <i class="fas fa-exclamation-circle"></i> -->
+          <img src="/icons/error.png" alt="error">
+          <%=error%>
+        </small>
+        <%}%>
       <form action="/login" method="POST">
         <!-- Post Title -->
         <div class="input-wrapper">
