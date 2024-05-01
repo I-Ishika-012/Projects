@@ -54,7 +54,7 @@ app.use((req, res, next) => {
 //!user home page
 app.get('/', async (req, res) => {
     try {
-      const posts = await Post.find();
+      const posts = await Post.find().populate('user');
       res.render('index', {posts});
     } catch (error) {
       res.render('index', {error: error.message});
