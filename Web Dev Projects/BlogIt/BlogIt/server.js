@@ -8,10 +8,14 @@ const MongoStore = require('connect-mongo'); //session store or persisting sessi
 const methodOverride = require('method-override');
 const globalErrHandler = require('./middlewares/globalHandler');
 const Post = require('./models/post/Post');
+const { truncatePost } = require('./utils/helpers');
 // dotenv.config();
 
 require('./config/dbConnect');
 const app = express();
+
+//helpers
+app.locals.truncatePost;
 
 //middlewares
 app.use(express.json()); // for parsing application/json ie pass incoming data as json
