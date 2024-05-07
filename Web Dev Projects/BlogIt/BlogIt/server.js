@@ -15,7 +15,7 @@ require('./config/dbConnect');
 const app = express();
 
 //helpers
-app.locals.truncatePost;
+app.locals.truncatePost = truncatePost;
 
 //middlewares
 app.use(express.json()); // for parsing application/json ie pass incoming data as json
