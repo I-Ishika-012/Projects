@@ -32,9 +32,9 @@ const fetchPostsCtrl =  async (req, res, next) => {
     try {
       //!find all posts in db
       const posts = await Post.find().populate("comments");
-      res.json({
-        status: "success",
-        data: posts,
+      res.render('posts/postDetails', { 
+        posts,
+        error: "",
       });
     } catch (error) {
       next(appErr(error.message));
