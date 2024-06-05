@@ -56,7 +56,7 @@
               <img src="<% = post?.user.profrileImage %>" alt="" class="comment-author-image">
               <div class="comment-author">
                 <h4><% =post?.user?.fullname %></h4>
-                <span>January 1, 2020</span>
+                <span><% =post?.createdAt.toLocaleDateString() %></span>
               </div>
             </div>
             <div class="comment-body">
@@ -79,10 +79,10 @@
           </div>
           <div class="comment">
             <div class="comment-info">
-              <img src="./images/post1.jpg" alt="" class="comment-author-image">
+              <img src="<% = post?.user.profrileImage %>" alt="" class="comment-author-image">
               <div class="comment-author">
-                <h4>John Doe</h4>
-                <span>January 1, 2020</span>
+                <h4><% =post?.user?.fullname %></h4>
+                <span><% =post?.createdAt.toLocaleDateString() %></span>
               </div>
             </div>
             <div class="comment-body">
@@ -114,10 +114,7 @@
           <h2 class="about-name"><% =post?.user?.fullname %></h2>
           <small><%=post?.user?.role %></small>
           <p class="about-me-bio">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum
-            adipisci eligendi nobis itaque ex? Veniam tempore itaque cumque
-            fugiat iusto voluptatibus odit inventore dolorem numquam maxime,
-            repellendus labore corrupti expedita?
+            <% = post?.user?.bio %>
           </p>
         </div>
 
