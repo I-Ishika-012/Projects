@@ -28,16 +28,13 @@
               <% =post?.user?.fullname %>
             </span>
             <span class="post-date">
-              <i class="far fa-calendar-alt"></i>
-              <time datetime="2020-01-01">January 1, 2020</time>
+              <img class="calendar" src="/icons/calendar.png">
+              <time datetime="2020-01-01"><% =post?.createdAt.toLocaleDateString() %></time>
             </span>
           </p>
-          <h1 class="post-title">Become a Web Developer</h1>
+          <h1 class="post-title"><% =post?.title %></h1>
           <p class="post-body">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia
-            itaque inventore culpa placeat! Cum nam optio, labore, voluptas sunt
-            quam rem cupiditate laboriosam amet reiciendis velit doloribus eum!
-            Repudiandae, odio?
+            <% =post?.description %>
           </p>
         </article>
         <!-- Comment form -->
