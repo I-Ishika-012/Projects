@@ -53,9 +53,9 @@
           <h2>Comments</h2>
           <div class="comment">
             <div class="comment-info">
-              <img src="% = post?.user.profrileImage %>" alt="" class="comment-author-image">
+              <img src="<% = post?.user.profrileImage %>" alt="" class="comment-author-image">
               <div class="comment-author">
-                <h4>John Doe</h4>
+                <h4><% =post?.user?.fullname %></h4>
                 <span>January 1, 2020</span>
               </div>
             </div>
@@ -111,7 +111,7 @@
           <h2>About The Author</h2>
           <img class="avatar" src="<% = post?.user.profrileImage %>" alt="">
 
-          <h2 class="about-name">Emmanuel</h2>
+          <h2 class="about-name"><% =post?.user?.fullname %></h2>
           <small>FullStack Web Developer</small>
           <p class="about-me-bio">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum
