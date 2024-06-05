@@ -197,7 +197,7 @@
     margin-right: 10px;
   }
   /* Footer */
-  footer {
+    /*footer {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -262,7 +262,7 @@
     font-size: 30px;
     color: #fcbf49;
     text-decoration: none;
-  }
+  }*/
   /* Mobile first responsive design */
   @media (min-width: 675px) {
     nav {
