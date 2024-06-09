@@ -102,7 +102,9 @@ const updatePostCtrl =  async (req, res) => {
         data: updatedPost,
       });
     } catch (error) {
-      next(appErr(error.message, 404));
+      return res.render("posts/updatePost", { error: error.message,
+        post : "",
+       });
     }
   }
 
