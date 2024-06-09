@@ -79,10 +79,7 @@ const commentUpdateCtrl =  async (req, res, next) => {
       message: req.body.message,
     }, 
     { new: true });
-    res.json({
-      status: "success",
-      data: updatedComment,
-    });
+    res.redirect(`/api/v1/posts/${req.query.postId}`);
   } catch (error) {
     next(appErr(error.message, 404));
   }
