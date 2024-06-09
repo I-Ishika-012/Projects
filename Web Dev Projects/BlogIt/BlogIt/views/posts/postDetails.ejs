@@ -72,16 +72,21 @@
                   <%=comment?.message %>
                 </p>
                 <!-- delete/update icon -->
-                <div class="comment-actions">
-                  <a href="#" class="post-details-update">
-                    <img class="edit" src="/icons/edit.png">
-                  </a>
-                 <!--delete post form icon-->
-              <form action="/api/v1/comments/<% = comment?._id %>?_method=DELETE" class="post-delete" method="post">
-                <button>
-                  <img class="trash" src="/icons/delete.png">
-                </button>
-              </form>
+                <% if(comment?.user?._id.toString() === userAuth?.toString()) { %>
+                  <div class="post-details-action">
+                    <!--update post form icon-->
+                    <div class="post-details-actions">
+                      <a href="#" class="comment-update">
+                        <img class="edit" src="/icons/edit.png">
+                      </a>
+                      <!--delete post form icon-->
+                  <form action="/api/v1/comments/<% = comment?._id %>?_method=DELETE&postId=<% = post?._id %>" class="post-delete" method="post">
+                    <button>
+                      <img class="trash" src="/icons/delete.png">
+                    </button>
+                  </form>
+                </div>
+                <% } %>
                 </div>
               </div>
             </div>
