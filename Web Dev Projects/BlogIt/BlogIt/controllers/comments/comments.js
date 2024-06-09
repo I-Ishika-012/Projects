@@ -53,10 +53,8 @@ const commentDeleteCtrl =  async (req, res, next) => {
     }
     //!delete
     const deletedComment = await Comment.findByIdAndDelete(req.params.id);
-    res.json({
-      status: "success",
-      data: "comment deleted",
-    });
+    //!redirect
+    res.redirect(`/api/v1/posts/${comment.id}`);
   } catch (error) {
     next(appErr(error.message, 404));
   }
