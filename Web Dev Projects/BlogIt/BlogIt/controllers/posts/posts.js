@@ -46,7 +46,7 @@ const fetchPostCtrl =  async (req, res, next) => {
       //!get id from params
       const id = req.params.id;
       //!find the post in db
-      const post = await Post.findById(id).populate("comments");
+      const post = await Post.findById(id).populate("comments").populate("user");
       //!res.json({ status: "success", post: post });
       res.json({
         status: "success",
