@@ -22,20 +22,22 @@
       <main class="post-details">
         <article class="post-details-content">
           <img src="<% = post?.image %>" alt="" class="post-image">
-          <div class="post-details-action">
+         <% if(post?.user?._id.toString() === userAuth?.toString()) { %>
+            <div class="post-details-action">
               <!--update post form icon-->
-              <form action="" class="post-update">
+              <form action="/api/v1/posts/<% = post?._id %>?_method=PUT" class="post-update">
                 <button>
                   <img class="edit" src="/icons/edit.png">
                 </button>
               </form>
               <!--delete post form icon-->
-              <form action="/api/v1/posts/<% = post?._id %>?_method=DELETE" method="post" class="post-delete">
+              <form action="/api/v1/posts/<% = post?._id %>?_method=DELETE" class="post-delete" method="post">
                 <button>
                   <img class="trash" src="/icons/delete.png">
                 </button>
               </form>
           </div>
+          <% } %>
           <h1 class="post-title"><% =post?.title %></h1>
           <p class="post-body">
             <% =post?.description %>
