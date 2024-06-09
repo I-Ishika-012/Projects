@@ -33,13 +33,15 @@ const commentCtrl = async (req, res, next) => {
   }
 
 const commentPostCtrl =  async (req, res, next) => {
-    try {
-      res.json({
-        status: "success",
-        user: "Post comments",
-      });
+   try {
+      const comment = await Comment.findById(req.params.id);
+      return res.render("comments/updateComment", {
+        comment, error: 'Comment fetching failed',
+      })
     } catch (error) {
-      next(appErr(error.message, 404));
+      res.render("comments/updateComment", {
+        error: error.message
+      });
     }
   }
 
