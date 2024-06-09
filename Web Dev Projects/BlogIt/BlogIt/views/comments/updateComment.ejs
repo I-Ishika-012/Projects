@@ -29,7 +29,7 @@
         </small>
         <%}%>
 
-      <form action="/api/v1/comments/<%=comment?._id%>?_method=PUT" method="POST">
+      <form action="/api/v1/comments/<%=comment?._id%>?_method=PUT&postId=<% = post?._id %>" method="POST">
 
         <label for="password">Message</label>
         <input value="<%=comment?.message%>" type="text" name="message">
