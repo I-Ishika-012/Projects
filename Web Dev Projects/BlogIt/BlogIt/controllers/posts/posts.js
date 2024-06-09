@@ -85,7 +85,9 @@ const updatePostCtrl =  async (req, res) => {
       const post = await Post.findById(req.params.id);
       //!check if the post belongs to user
       if(post.user.toString() !== req.session.userAuth.toString()) {
-        return next(appErr("You are not authorized to update this post", 403));
+        return res.render("posts/updatePost", { error: "You are not authorized to update this post",
+          post,
+         });
       }
       //!update
       const updatedPost = await Post.findByIdAndUpdate(req.params.id, {
