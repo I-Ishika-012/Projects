@@ -264,29 +264,18 @@
     text-decoration: none;
   }*/
   /* Mobile first responsive design */
-  @media (min-width: 675px) {
-    nav {
-      flex-direction: row;
-      justify-content: space-between;
-    }
+@media (min-width: 675px) {
+    
     .header-content h1 {
-    font-size: 5rem;
-    padding: 10px;
-    margin-top: 20px;
-    color: var(--uranian-blue);
+      font-size: 5rem;
+      padding: 10px;
+      margin-top: 20px;
     }
-    nav ul {
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      margin-right: 20px;
-    }
+   
     .container-flex {
       flex-direction: row;
     }
-    nav ul li {
-      padding: 10px;
-    }
+   
     main {
       width: 70%;
     }
@@ -298,6 +287,9 @@
     }
     .latest-post-title {
       margin-top: 60px;
+    }
+  }
+  
     }
   }
   
