@@ -13,6 +13,17 @@ postRoutes.get("/get-post-form", (req, res) => {
   res.render("posts/addPost", { error: "" });
 });
 
+
+//update post form
+postRoutes.get("/:id", async (req, res) => {
+  try {
+    const post = await Post.findById(req.params.id);
+    res.render("posts/updatePost", { post });
+  } catch (error) {
+    res.render("posts/updatePost", { error, post:"" });
+  }
+});
+
 //POST/api/v1/posts
 postRoutes.post("/", protected, upload.single("file"), createPostCtrl); 
 
