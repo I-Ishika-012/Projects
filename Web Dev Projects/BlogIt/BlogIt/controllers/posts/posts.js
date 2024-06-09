@@ -89,14 +89,25 @@ const updatePostCtrl =  async (req, res) => {
           post,
          });
       }
-      //!update
-      const updatedPost = await Post.findByIdAndUpdate(req.params.id, {
+      //! check if user is updating image
+      if(req.file) {
+      await Post.findByIdAndUpdate(req.params.id, {
         title,
         description,
         category,
         image: req.file.path,
       }, 
       { new: true });
+      }
+      else {
+         //!update
+        await Post.findByIdAndUpdate(req.params.id, {
+          title,
+          description,
+          category, 
+        }, 
+        { new: true });
+      }
       //!redirect
       res.redirect("/");
     } catch (error) {
