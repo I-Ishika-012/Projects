@@ -25,11 +25,11 @@
          <% if(post?.user?._id.toString() === userAuth?.toString()) { %>
             <div class="post-details-action">
               <!--update post form icon-->
-              <form action="/api/v1/posts/<% = post?._id %>?_method=PUT" class="post-update">
+               <a href="/api/v1/posts/get-form-update/<% = post?._id %>">
                 <button>
                   <img class="edit" src="/icons/edit.png">
                 </button>
-              </form>
+              </a>
               <!--delete post form icon-->
               <form action="/api/v1/posts/<% = post?._id %>?_method=DELETE" class="post-delete" method="post">
                 <button>
