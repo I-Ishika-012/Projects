@@ -24,8 +24,14 @@
           <img src="<% = post?.image %>" alt="" class="post-image">
           <p class="post-info">
             <span class="post-date">
-              <img class="calendar" src="/icons/calendar.png">
-              <time datetime="2020-01-01"><% =post?.createdAt.toLocaleDateString() %></time>
+              <!--update post icon-->
+              <a href="#" class="comment-update">
+                <img class="edit" src="/icons/edit.png">
+              </a>
+              <!--delete post icon-->
+              <a href="#" class="comment-delete">
+                <img class="trash" src="/icons/delete.png">
+              </a>
             </span>
           </p>
           <h1 class="post-title"><% =post?.title %></h1>
