@@ -97,10 +97,8 @@ const updatePostCtrl =  async (req, res) => {
         image: req.file.path,
       }, 
       { new: true });
-      res.json({
-        status: "success",
-        data: updatedPost,
-      });
+      //!redirect
+      res.redirect("/");
     } catch (error) {
       return res.render("posts/updatePost", { error: error.message,
         post : "",
