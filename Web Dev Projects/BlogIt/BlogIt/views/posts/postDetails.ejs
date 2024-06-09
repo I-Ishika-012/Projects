@@ -76,9 +76,12 @@
                   <a href="#" class="comment-update">
                     <img class="edit" src="/icons/edit.png">
                   </a>
-                  <a href="#" class="comment-delete">
-                    <img class="trash" src="/icons/delete.png">
-                  </a>
+                 <!--delete post form icon-->
+              <form action="/api/v1/posts/<% = post?._id %>?_method=DELETE" class="post-delete" method="post">
+                <button>
+                  <img class="trash" src="/icons/delete.png">
+                </button>
+              </form>
                 </div>
               </div>
             </div>
