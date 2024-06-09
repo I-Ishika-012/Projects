@@ -61,7 +61,7 @@
           <% = post?.comments?.forEach((comment) => { %>
             <div class="comment">
               <div class="comment-info">
-                <img src="<% = post?.user.profrileImage %>" alt="" class="comment-author-image">
+                <img src="<% = comment?.user.profrileImage %>" alt="" class="comment-author-image">
                 <div class="comment-author">
                   <h4><% =post?.user?.fullname %></h4>
                   <span><% =post?.createdAt.toLocaleDateString() %></span>
