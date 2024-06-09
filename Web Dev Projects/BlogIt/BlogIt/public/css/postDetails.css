@@ -118,6 +118,15 @@
     align-items: center;
     color: gray;
   }
+
+.post-details-action button {
+    text-decoration: none;
+    /* color: #fff; */
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 20px;
+  }
   
   .post-author {
     margin: 10px;
