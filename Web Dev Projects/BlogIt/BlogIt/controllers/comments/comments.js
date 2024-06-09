@@ -12,6 +12,7 @@ const commentCtrl = async (req, res, next) => {
       const comment = await Comment.create({
         user: req.session.userAuth,
         message: message,
+        post: post._id,  
       })
       //!push the comment created to the post comments array
       post.comments.push(comment._id);
