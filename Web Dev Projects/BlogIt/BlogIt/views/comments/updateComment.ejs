@@ -32,7 +32,7 @@
       <form action="/api/v1/users/login" method="POST">
 
         <label for="password">Message</label>
-        <input type="text" name="message">
+        <input value="<%=comment?.message%>" type="text" name="message">
 
         <button type="submit">Update</button>
       </form>
