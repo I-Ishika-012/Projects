@@ -22,17 +22,19 @@
       <main class="post-details">
         <article class="post-details-content">
           <img src="<% = post?.image %>" alt="" class="post-image">
-          <div class="post-info">
-            <span class="post-date">
-              <!--update post icon-->
-              <a href="#" class="post-update">
-                <img class="edit" src="/icons/edit.png">
-              </a>
-              <!--delete post icon-->
-              <a href="#" class="post-delete">
-                <img class="trash" src="/icons/delete.png">
-              </a>
-            </span>
+          <div class="post-details-action">
+              <!--update post form icon-->
+              <form action="" class="post-update">
+                <button>
+                  <img class="edit" src="/icons/edit.png">
+                </button>
+              </form>
+              <!--delete post form icon-->
+              <form action="" class="post-delete">
+                <button>
+                  <img class="trash" src="/icons/delete.png">
+                </button>
+              </form>
           </div>
           <h1 class="post-title"><% =post?.title %></h1>
           <p class="post-body">
