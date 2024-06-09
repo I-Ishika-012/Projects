@@ -46,7 +46,7 @@
         <!-- Comment form -->
         <div class="comment-form">
           <h2>Leave a comment</h2>
-          <form action="">
+          <form action="/api/v1/comments/<% = post?._id %>" method="post">
             <div class="form-group">
               <input type="text" name="name" id="name">
             </div>
