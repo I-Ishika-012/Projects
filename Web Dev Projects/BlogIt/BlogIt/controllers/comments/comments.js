@@ -26,7 +26,7 @@ const commentCtrl = async (req, res, next) => {
       await user.save({ validateBeforeSave: false });
       //!send response
       //!redirect
-      res.redirect(`/api/v1/posts/${req.params.id}`);
+      res.redirect(`/api/v1/posts/${req.query.postId}`);
     } catch (error) {
       next(appErr(error.message));
     }
