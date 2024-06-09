@@ -30,7 +30,7 @@
                 </button>
               </form>
               <!--delete post form icon-->
-              <form action="" class="post-delete">
+              <form action="/api/v1/posts/<% = post?._id %>?_method=DELETE" method="post" class="post-delete">
                 <button>
                   <img class="trash" src="/icons/delete.png">
                 </button>
