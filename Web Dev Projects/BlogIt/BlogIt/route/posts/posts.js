@@ -18,7 +18,7 @@ postRoutes.get("/get-post-form", (req, res) => {
 postRoutes.get("/get-form-update/:id", async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);
-    res.render("posts/updatePost", { post });
+    res.render("posts/updatePost", { post, error: "" });
   } catch (error) {
     res.render("posts/updatePost", { error, post:"" });
   }
