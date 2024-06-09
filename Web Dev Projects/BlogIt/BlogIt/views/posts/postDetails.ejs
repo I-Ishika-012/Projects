@@ -57,58 +57,32 @@
         <!-- comments -->
         <div class="comments">
           <h2>Comments</h2>
-          <div class="comment">
-            <div class="comment-info">
-              <img src="<% = post?.user.profrileImage %>" alt="" class="comment-author-image">
-              <div class="comment-author">
-                <h4><% =post?.user?.fullname %></h4>
-                <span><% =post?.createdAt.toLocaleDateString() %></span>
+          <!-- comment loop -->
+          <% = post?.comments?.forEach((comment) => { %>
+            <div class="comment">
+              <div class="comment-info">
+                <img src="<% = post?.user.profrileImage %>" alt="" class="comment-author-image">
+                <div class="comment-author">
+                  <h4><% =post?.user?.fullname %></h4>
+                  <span><% =post?.createdAt.toLocaleDateString() %></span>
+                </div>
+              </div>
+              <div class="comment-body">
+                <p>
+                  <%=comment?.message %>
+                </p>
+                <!-- delete/update icon -->
+                <div class="comment-actions">
+                  <a href="#" class="comment-update">
+                    <img class="edit" src="/icons/edit.png">
+                  </a>
+                  <a href="#" class="comment-delete">
+                    <img class="trash" src="/icons/delete.png">
+                  </a>
+                </div>
               </div>
             </div>
-            <div class="comment-body">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-                quod, voluptatum, quia, voluptas quas voluptates quibusdam
-                voluptatibus quae quidem quos nesciunt. Quisquam, quae
-                voluptatibus. Quisquam, quae voluptatibus.
-              </p>
-              <!-- delete/update icon -->
-              <div class="comment-actions">
-                <a href="#" class="comment-update">
-                  <img class="edit" src="/icons/edit.png">
-                </a>
-                <a href="#" class="comment-delete">
-                  <img class="trash" src="/icons/delete.png">
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="comment">
-            <div class="comment-info">
-              <img src="<% = post?.user.profrileImage %>" alt="" class="comment-author-image">
-              <div class="comment-author">
-                <h4><% =post?.user?.fullname %></h4>
-                <span><% =post?.createdAt.toLocaleDateString() %></span>
-              </div>
-            </div>
-            <div class="comment-body">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-                quod, voluptatum, quia, voluptas quas voluptates quibusdam
-                voluptatibus quae quidem quos nesciunt. Quisquam, quae
-                voluptatibus. Quisquam, quae voluptatibus.
-              </p>
-              <!-- delete/update icon -->
-              <div class="comment-actions">
-                <a href="#" class="comment-update">
-                  <img class="edit" src="/icons/edit.png">
-                </a>
-                <a href="#" class="comment-delete">
-                  <img class="trash" src="/icons/delete.png">
-                </a>
-              </div>
-            </div>
-          </div>
+          <% }) %>
         </div>
       </main>
       <!-- aside -->
