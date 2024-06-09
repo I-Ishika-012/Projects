@@ -40,3 +40,20 @@
     font-size: 1.2rem;
     cursor: pointer;
   }
+ @media (min-width: 675px) {
+    nav {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    nav ul {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-right: 20px;
+    }
+    nav ul li {
+      padding: 10px;
+    }
+    
+    }
+
