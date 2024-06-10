@@ -124,7 +124,19 @@ img {
 }
 
 /*=============== HEADER & NAV ===============*/
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: transparent;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+}
 
+.header .nav-container a img {
+  width: 10rem;
+  padding: 10px;
+}
 
 /* Navigation for mobile devices */
 
