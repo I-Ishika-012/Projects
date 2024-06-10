@@ -164,7 +164,7 @@ img {
     backdrop-filter: blur(16px);
     --webkit-backdrop-filter: blur(16px); /* For safari */
     top: 0;
-    right: 0;
+    right: -100%;
     width: 80%;
     height: 100%;
     padding-block: 6rem 3rem 0;
@@ -198,6 +198,19 @@ img {
   top: 1rem;
   right: 1.5rem;
 }
+
+.nav-img-1 {
+  width: 80px;
+  right: .75rem;
+  left: 11rem;
+}
+
+.nav-img-2 {
+  width: 60px;
+  left: 6rem;
+  top: 28rem;
+}
+
 
 /* Show menu */
 
