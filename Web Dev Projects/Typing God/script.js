@@ -1,3 +1,4 @@
+//!To ensure that the script is loaded after the DOM has been fully loaded, we can use the DOMContentLoaded event. This event is fired when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.
 document.addEventListener("DOMContentLoaded", () => {
   //Select the elements
   const textToTypeElement = document.getElementById("text-to-type");
