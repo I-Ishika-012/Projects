@@ -20,7 +20,14 @@ if(navClose){
 }
 
 /*=============== REMOVE MENU MOBILE ===============*/
+const navLink = document.querySelectorAll('.nav-link')
 
+const linkActive = () =>{
+    const navMenu = document.getElementById('nav-menu')
+    navMenu.classList.remove('show-menu')
+}   
+
+navLink.forEach(n => n.addEventListener('click', linkActive))
 
 /*=============== ADD BLUR HEADER ===============*/
 
