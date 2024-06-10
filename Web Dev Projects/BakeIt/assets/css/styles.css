@@ -157,7 +157,21 @@ img {
 }
 
 /* Navigation for mobile devices */
-
+@media screen and (max-width: 1150px) {
+  .nav-menu {
+    position: fixed;
+    background-color: hsla(0, 0%, 6%, .2);
+    backdrop-filter: blur(16px);
+    --webkit-backdrop-filter: blur(16px); /* For safari */
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 100%;
+    padding-block: 6rem 3rem 0;
+    padding-inline: 2rem;
+    transition: right .4s;
+  }
+}
 
 /* Show menu */
 
