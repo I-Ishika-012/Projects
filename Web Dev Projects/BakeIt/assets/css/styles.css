@@ -133,9 +133,13 @@ img {
   z-index: var(--z-fixed);
 }
 
-.header .nav-container a img {
+.header .nav a img {
   width: 10rem;
   padding: 10px;
+}
+
+.header .nav a img:hover {
+  transform: scale(1.1);
 }
 
 .nav {
@@ -144,6 +148,12 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.nav-toggle, .nav-close {
+  font-size: 1.5rem;
+  color: var(--title-color);
+  cursor: pointer;
 }
 
 /* Navigation for mobile devices */
