@@ -133,21 +133,28 @@ img {
   z-index: var(--z-fixed);
 }
 
-.header .nav a img {
+.nav-logo {
   width: 10rem;
   padding: 10px;
 }
 
-.header .nav a img:hover {
+.nav-logo:hover {
   transform: scale(1.1);
 }
 
-.nav {
+.nav-menu {
   position: relative;
   height: var(--header-height);
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+nav-list{
+  /* margin-top: 500px; */
+  display: flex;
+  column-gap: 2.5rem;
+  transition: color .4s;
 }
 
 .nav-toggle, .nav-close {
