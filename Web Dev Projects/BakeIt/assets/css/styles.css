@@ -194,7 +194,7 @@ nav-list{
     padding-inline: 2rem;
     transition: right .4s;
   }
-}
+
 
 .nav-list {
   display: flex;
@@ -213,18 +213,19 @@ nav-list{
   color: var(--first-color);
 }
 
-.nav-close {
+.nav-close, .nav-img-1, .nav-img-2 {
   position: absolute;
 }
 
 .nav-close {
   top: 1rem;
-  right: 1.5rem;
+  right: 4rem;
 }
 
 .nav-img-1 {
   width: 80px;
   right: .75rem;
+  top: 10rem;
   left: 11rem;
 }
 
@@ -234,6 +235,11 @@ nav-list{
   top: 28rem;
 }
 
+.nav-toggle {
+  top: 1.5rem;
+  right: 1.5rem;
+}
+}
 
 /* Show menu */
 .show-menu {
@@ -291,6 +297,11 @@ nav-list{
   position: absolute;
   top: 15rem;
   left: 4rem;
+}
+
+.home__img {
+  max-width: 400px;
+  justify-self: center;
 }
 
 /*=============== BUTTON ===============*/
