@@ -1,3 +1,4 @@
+require("dotenv").config();
 // Set up your API key as an environment variable (see "Set up your API key" below) require("dotenv").config();
 const {GoogleGenerativeAI } = require("@google/generative-ai");
 
