@@ -3,6 +3,10 @@ const express = require("express");
 // Set up your API key as an environment variable (see "Set up your API key" below) require("dotenv").config();
 const {GoogleGenerativeAI } = require("@google/generative-ai");
 
+//!express instance
+const app = express();
+app.use(express.json());
+
 // Access your API key as an environment variable (see "Set up your API key" above) const genAI = new GoogleGenerativeAI (process.env.API_KEY);
 const genAI=new GoogleGenerativeAI(process.env.API_KEY);
 
@@ -21,4 +25,8 @@ console.log(text);
 }
 
 // Run the model
-run();
+//!start the server
+app.listen(3000, () => {
+    console.log("Server is running on port 3000")
+});
+
