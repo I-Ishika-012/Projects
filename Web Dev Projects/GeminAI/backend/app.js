@@ -5,6 +5,8 @@ const {GoogleGenerativeAI } = require("@google/generative-ai");
 
 //!express instance
 const app = express();
+
+//!middleware
 app.use(express.json());
 
 // Access your API key as an environment variable (see "Set up your API key" above) const genAI = new GoogleGenerativeAI (process.env.API_KEY);
