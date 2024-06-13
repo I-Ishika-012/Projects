@@ -239,6 +239,9 @@ nav-list{
   top: 1.5rem;
   right: 1.5rem;
 }
+  .nav-close{
+  top: 1.5rem;
+}
 }
 
 /* Show menu */
@@ -302,6 +305,7 @@ nav-list{
 .home__img {
   max-width: 400px;
   justify-self: center;
+  rotate: 15deg;
 }
 
 /*=============== BUTTON ===============*/
