@@ -347,7 +347,18 @@ nav-list{
 }
 
 /*=============== BUTTON ===============*/
+.button {
+  display: inline-flex;
+  background-color: var(--first-color);
+  color: var(--black-color);
+  padding: 1.125rem 2rem;
+  font-weight: var(--font-semi-bold);
+  transition: background-color .4s;
+}
 
+.button:hover {
+  background-color: var(--first-color-alt);
+}
 
 /*=============== NEW ===============*/
 
