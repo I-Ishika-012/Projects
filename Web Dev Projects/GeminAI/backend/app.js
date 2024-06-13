@@ -1,5 +1,6 @@
 require("dotenv").config();
 const express = require("express");
+const cors = require("cors");
 // Set up your API key as an environment variable (see "Set up your API key" below) require("dotenv").config();
 const {GoogleGenerativeAI } = require("@google/generative-ai");
 
@@ -7,6 +8,10 @@ const {GoogleGenerativeAI } = require("@google/generative-ai");
 const app = express();
 
 //!middleware
+const corsOptions = {
+    origin: ["http://localhost:5173", "http://localhost:5174"]
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 
 //!generate content route
