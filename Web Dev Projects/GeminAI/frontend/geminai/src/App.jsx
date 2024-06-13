@@ -19,7 +19,11 @@ function App() {
       <img src={logo}/>
       <h1>AI Content Generator</h1>
       </header>
-      <p></p>
+      <p>Enter a prompt and let GeminAI craft a unique content for you!</p>
+      <form className='App-form'>
+        <label htmlFor="">Enter a prompt</label>
+        <input type="text" value={prompt} />
+      </form>
    </div>>
   )
 }
