@@ -6,7 +6,7 @@ import { useMutation } from '@tanstack/react-query'
 import './App.css'
 
 //!Function that must return a promise (useMutation)
-const makeRequestAPI = async () => {
+const makeRequestAPI = async (prompt) => {
   const res = await axios.post("https://localhost:3000/generate" )
   return res.data;
 };
