@@ -23,6 +23,7 @@ function App() {
       <form className='App-form'>
         <label htmlFor="">Enter a prompt</label>
         <input type="text" value={prompt} />
+        <button className='App-button' type='submit'>Generate</button>
       </form>
    </div>>
   )
