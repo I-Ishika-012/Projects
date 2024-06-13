@@ -308,6 +308,25 @@ nav-list{
   rotate: 15deg;
 }
 
+.home__footer, .home__location, .home__social {
+  display: flex;
+}
+
+.home__footer {
+  justify-content:  space-between;
+  align-items: center; 
+}
+
+.home__location {
+  align-items: center;
+  column-gap: .5rem;
+}
+
+.home__location i {
+  font-size: 1.25rem;
+  color: var(--first-color);
+}
+
 /*=============== BUTTON ===============*/
 
 
