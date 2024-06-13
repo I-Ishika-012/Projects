@@ -7,7 +7,7 @@ import logo from './public/geminai-logo.png'
 
 //!Function that must return a promise (useMutation)
 const makeRequestAPI = async () => {
-  const res = await axios.post("https://localhost:5173s/generate" )
+  const res = await axios.post("https://localhost:3000/generate" )
   return res.data;
 };
 
