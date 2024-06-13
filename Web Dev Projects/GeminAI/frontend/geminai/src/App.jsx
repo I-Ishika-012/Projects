@@ -12,7 +12,18 @@ const makeRequestAPI = async () => {
 };
 
 function App() {
+function App() {
+  //!mutation
+const mutation = useMutation({
+  mutationFn: makeRequestAPI,
+  mutationKey: ['generate-request'],
+});
 
+//!submit handler
+const submitHandler = (e) => {
+  e.preventDefault();
+  mutation.mutate(prompt);
+};
   return (
    <div className="App">
     <header className="App-header">
@@ -20,7 +31,7 @@ function App() {
       <h1>AI Content Generator</h1>
       </header>
       <p>Enter a prompt and let GeminAI craft a unique content for you!</p>
-      <form className='App-form'>
+      <form className='App-form' onSubmit={submitHandler}>
         <label htmlFor="">Enter a prompt</label>
         <input type="text" value={prompt} />
         <button className='App-button' type='submit'>Generate</button>
