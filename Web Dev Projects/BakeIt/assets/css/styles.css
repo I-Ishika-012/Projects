@@ -426,6 +426,18 @@ nav-list{
   margin-bottom: 3rem;
 }
 
+  .about__bread {
+  width: 100px;
+  position: absolute;
+  bottom: 1rem;
+  top: 120rem;
+  right: 0;
+}
+
+.about__img {
+  width: 600px;
+  justify-self: center;
+}
 
 /*=============== FAVORITES ===============*/
 
