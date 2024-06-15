@@ -439,8 +439,64 @@ nav-list{
   justify-self: center;
 }
 
-/*=============== FAVORITES ===============*/
+/*=============== CONTACT ===============*/
+.contact__container{
+  padding-top: 1.5rem;
+  row-gap: 4rem;
+  padding-left: 1.5rem;
+}
 
+.contact__form{
+  text-align: center;
+  background: rgba( 239, 245, 232, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba(204, 205, 221, 0.37);
+  backdrop-filter: blur( 4px );
+  --webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.contact__title{
+  font-size: var(--h2-font-size);
+  font-family: var(--second-font);
+  color: var(--first-color);
+  margin-bottom: 1.5rem;
+}
+
+.contact__input{
+  width: 100%;
+  padding: .8rem;
+  outline: none;
+  border: none;
+  background: rgba(239, 245, 232, 0.068);
+  box-shadow: 0 8px 32px 0 rgba(204, 205, 221, 0.296);
+  backdrop-filter: blur( 4px );
+  --webkit-backdrop-filter: blur( 4px );
+  margin-bottom: 1rem;
+  border-radius: .5rem;
+}
+
+.contact__label{
+  display: block;
+  margin-bottom: .5rem;
+  font-size: var(--medium-font-size);
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  font-family: var(--body-font);
+}
+
+.contact__button{
+  border-radius: 10px;
+}
+
+.contact__info{
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.contact__card{
+  margin: 1rem;
+}
 
 /*=============== VISIT ===============*/
 
