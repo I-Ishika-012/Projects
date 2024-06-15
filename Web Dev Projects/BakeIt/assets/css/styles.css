@@ -388,7 +388,7 @@ nav-list{
 }
 
 .new__img{
-  width: 180px;
+  width: 200px;
 }
 
 .new__title{ 
@@ -401,6 +401,15 @@ nav-list{
 .new__descr{
   font-size: var(--small-font-size);
 }
+
+.new__card:nth-child(2) img{
+  order: -1;
+}
+
+.new__button{
+  justify-self: center;
+  margin-top: 1.5rem;
+  
 /*=============== ABOUT ===============*/
 
 
