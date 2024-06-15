@@ -498,6 +498,11 @@ nav-list{
   margin: 1rem;
 }
 
+.contact__img{
+  width: 700px;
+  justify-self: center;
+}
+
 /*=============== VISIT ===============*/
 
 
