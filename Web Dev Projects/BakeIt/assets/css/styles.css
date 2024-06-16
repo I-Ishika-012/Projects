@@ -545,6 +545,14 @@ nav-list{
 }
 
 /*=============== FOOTER ===============*/
+.footer {
+  padding-block: 3rem 2rem;
+}
+
+.footer__container {
+  row-gap: 4rem;
+  position: relative;
+}
 
 
 /*=============== SCROLL BAR ===============*/
