@@ -429,11 +429,11 @@ nav-list{
 }
 
   .about__bread {
-  width: 100px;
+  width: 120px;
   position: absolute;
   bottom: 1rem;
-  top: 120rem;
-  right: 0;
+  top: 110rem;
+  right: 5rem;
 }
 
 .about__img {
