@@ -366,6 +366,7 @@ nav-list{
   padding: 1.125rem 2rem;
   font-weight: var(--font-semi-bold);
   transition: background-color .4s;
+  border-radius: 10px;
 }
 
 .button:hover {
