@@ -554,6 +554,85 @@ nav-list{
   position: relative;
 }
 
+  .footer__logo {
+  display: inline-block;
+  align-items: center;
+  column-gap: .5rem;
+  color: var(--first-color);
+  font-family: var(--second-font);
+  font-size: var(--h2-font-size);
+  margin-bottom: 1.5rem;
+  transition: color .4s;
+}
+
+.footer__logo:hover {
+  color: var(--first-color-alt);
+}
+
+.footer__content {
+  grid-template-columns: repeat(2, max-content);
+  gap: 4rem 2rem;
+}
+
+.footer__title {
+  font-size: var(--h3-font-size);
+  margin-bottom: 1.25rem;
+}
+
+.footer__list {
+  display: grid;
+  row-gap: .75rem;
+}
+
+.footer__info {
+  font-style: normal;
+}
+
+.footer__social {
+  display: flex;
+  column-gap: 1rem;
+}
+
+.footer__social a {
+  color: var(--title-color);
+  font-size: 1.5rem;
+  transition: color .4s;
+}
+
+.footer__social a:hover {
+  color: var(--first-color);
+}
+
+.footer__img-1, .footer__img-2 {
+  position: absolute;
+}
+
+.footer__img-1 {
+  width: 120px;
+  top: 290rem;
+  left: 15rem;
+}
+
+.footer__img-2 {
+  width: 180px;
+  left: 25rem;
+  top: 275rem;
+  rotate: -95deg;
+}
+
+.footer-logo__img {
+  width: 100px
+}
+
+.footer__copy {
+  display: block;
+  margin-top: 5rem;
+  text-align: center;
+  font-size: var(--small-font-size);
+}
+
+  
+
 
 /*=============== SCROLL BAR ===============*/
 
