@@ -717,6 +717,37 @@ nav-list{
 }
 
 /* For medium devices */
+@media screen and (min-width: 576px) {
+  .nav__menu {
+    width: 50%;
+  }
 
+  .home__container, .new__container, .about__container, .visit__container {
+    grid-template-columns: 350px;
+    justify-content: center;
+  }
+  
+  .favorite__container {
+    grid-template-columns: repeat(2, 180px);
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .footer__content {
+    grid-template-columns: repeat(3, max-content);
+  }
+
+  .footer__img-1 {
+    top: 315rem;
+    left: 8rem;
+  }
+
+  .footer__img-2 {
+    top: 300rem;
+    left: 23rem;
+  }
+
+  
+}
 
 /* For large devices */
