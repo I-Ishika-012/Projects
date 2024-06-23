@@ -1,6 +1,6 @@
 ## BlogIt - Full-Stack Blog Web App💻✍️
 
-### Project is currently being developed 🛠️💻
+### Deploying Soon.. 🛠️💻
 
 Responsive web application with secure user authentication,seamless assets management using API and relevant CRUD operations.
 
