@@ -10,4 +10,4 @@
 - Compatible with all mobile devices and with a beautiful and pleasant user interface.
 
 
-![preview img](aseets/img/preview.png)
+![preview img](https://github.com/I-Ishika-012/Projects/blob/main/Web%20Dev%20Projects/BakeIt/assets/img/preview.png)
