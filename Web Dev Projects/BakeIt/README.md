@@ -2,6 +2,7 @@
 
 ## Responsive Bakery Website
 
+- [Visit](https://bakeitthebakery.netlify.app/)
 - Responsive Bakery Website Design Using HTML CSS And JavaScript
 - Contains animations when scrolling.
 - Smooth scrolling in each section.
