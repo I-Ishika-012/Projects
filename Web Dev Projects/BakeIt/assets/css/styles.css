@@ -749,5 +749,53 @@ nav-list{
 
   
 }
+  
+@media screen and (min-width: 768px) {
+  .home {
+    padding-top: 3rem;
+  }
+
+  .home__container, .about__container {
+    grid-template-columns: repeat(2, 350px);
+    align-items: center;
+  }
+
+  .home__data {
+    text-align: initial ;
+  }
+
+  .home___footer {
+    grid-column: 1/3;
+  }
+
+  .footer__img-1 {
+    display: none;
+  }
+
+  .footer__img-2 {
+    display: none;
+  }
+
+  .about__data {
+    order: 1;
+  }
+
+  .about__data, .about__data .section__title {
+    text-align: initial;
+  }
+
+  .about__bread {
+    display: none;
+  }
+
+  .favorite__container {
+    grid-template-columns: repeat(3, 180px);
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+  }
+}
 
 /* For large devices */
